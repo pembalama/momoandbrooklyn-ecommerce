@@ -17,8 +17,16 @@ class Products extends React.Component {
 	}
 
 	render() {
-		console.log(this.state.products);
-		return <div>Products Component</div>;
+		// console.log(this.state.products);
+		const mappedProducts = this.state.products.map((product, i) => (
+			<div key={i} className="product-container">
+				<img src={product.image} alt={product.name} className="product-image" />
+				<p>{product.name}</p>
+				<p>{product.description}</p>
+				<p>${product.price}</p>
+			</div>
+		));
+		return <div className="products">{mappedProducts}</div>;
 	}
 }
 

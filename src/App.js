@@ -1,11 +1,13 @@
 import React from 'react';
-import Products from './Components/Products';
+import routes from './routes';
+import Header from './Components/Header';
 import './App.css';
 
 function App() {
 	return (
 		<div className="App">
-			<Products />
+			<Header />
+			{routes}
 		</div>
 	);
 }

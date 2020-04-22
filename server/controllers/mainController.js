@@ -4,11 +4,10 @@ module.exports = {
 
 		db.products
 			.get_products()
-
 			.then(products => res.status(200).send(products))
 			.catch(err => res.status(500).send(err));
 	},
-	addTocart: (req, res) => {
+	addToCart: (req, res) => {
 		const { cart_id, product_id, price } = req.body,
 			db = req.app.get('db');
 
@@ -34,5 +33,16 @@ module.exports = {
 			.delete_cart_item(id)
 			.then(() => res.sendStatus(200))
 			.catch(err => res.status(500).send(err));
+	},
+	completePurchase: async (req, res) => {
+		const { id } = req.params,
+			db = req.app.get('db');
+
+		db.cart.complete_purchase(id);
+
+		let userCart = await db.cart.create_cart(id);
+		let sessionUser = { ...req.session.user, cart_id: userCart[0].cart_id };
+		req.session.user = sessionUser;
+		res.status(200).send(req.session.user);
 	},
 };

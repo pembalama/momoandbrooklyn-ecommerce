@@ -1,4 +1,4 @@
-const brcypt = require('bcryptjs');
+const bcrypt = require('bcryptjs');
 
 module.exports = {
 	register: async (req, res) => {
@@ -7,7 +7,7 @@ module.exports = {
 
 		let foundUser = await db.customer.check_customer(email);
 		if (foundUser[0]) {
-			return res.status(400).send('Email is not available');
+			return res.status(400).send('Email is already in use');
 		}
 
 		const salt = bcrypt.genSaltSync(10);
@@ -26,7 +26,7 @@ module.exports = {
 
 		let foundUser = await db.customer.check_customer(email);
 		if (!foundUser[0]) {
-			return res.status(400).send('Email or Password is not correct');
+			return res.status(400).send('Email or Password is Incorrect');
 		}
 
 		const authorized = bcrypt.compareSync(password, foundUser[0].password);
@@ -38,7 +38,7 @@ module.exports = {
 		req.session.user = foundUser[0];
 		res.status(202).send(req.session.user);
 	},
-	logout: async (req, res) => {
+	logout: (req, res) => {
 		req.session.destroy();
 		res.sendStatus(200);
 	},

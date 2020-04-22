@@ -49,4 +49,4 @@ const AuthModal = props => {
 
 export default connect(null, { getUser })(AuthModal);
 
-// use REACT HOOKS here with the Auth Modal.
+// used REACT HOOKS here with the Auth Modal.

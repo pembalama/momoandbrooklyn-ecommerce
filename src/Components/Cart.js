@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
+import StripeCheckoutButton from './Stripe';
 
 class Cart extends React.Component {
 	constructor(props) {
@@ -37,13 +38,21 @@ class Cart extends React.Component {
 					<p>{item.name}</p>
 					<p>{item.description}</p>
 					<p>${item.price}</p>
+
 					<button onClick={() => this.deleteCartItem(item.cart_item_id)}>
 						Remove Item
 					</button>
 				</div>
 			);
 		});
-		return <div>{mappedCart}</div>;
+		return (
+			<div>
+				{mappedCart}
+				<div>
+					<StripeCheckoutButton />
+				</div>
+			</div>
+		);
 	}
 }
 

@@ -1,3 +1,6 @@
+const { SECRET_KEY } = process.env,
+	stripe = require('stripe')(SECRET_KEY);
+
 module.exports = {
 	getProducts: (req, res) => {
 		const db = req.app.get('db');
@@ -37,6 +40,23 @@ module.exports = {
 	completePurchase: async (req, res) => {
 		const { id } = req.params,
 			db = req.app.get('db');
+
+		const { token, amount } = req.body;
+
+		const charge = stripe.charges.create(
+			{
+				amount: amount,
+				currency: 'usd',
+				source: token.id,
+				description: 'Test Charge',
+			},
+			function (err, charge) {
+				if (err) {
+					return res.sendStatus(500);
+				}
+				res.sendStatus(200);
+			}
+		);
 
 		db.cart.complete_purchase(id);
 

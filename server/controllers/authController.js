@@ -1,4 +1,6 @@
 const bcrypt = require('bcryptjs');
+const nodemailer = require('nodemailer');
+const { EMAIL, PASSWORD } = process.env;
 
 module.exports = {
 	register: async (req, res) => {
@@ -19,6 +21,39 @@ module.exports = {
 
 		req.session.user = sessionCustomer;
 		res.status(201).send(req.session.user);
+
+		try {
+			let transporter = nodemailer.createTransport({
+				host: 'smtp.mail.yahoo.com',
+				port: 465,
+				service: 'yahoo',
+				secure: false,
+				auth: {
+					user: EMAIL,
+					pass: PASSWORD,
+				},
+			});
+
+			let info = await transporter.sendMail(
+				{
+					from: `Momo & Brooklyn <${EMAIL}>`,
+					to: email,
+					// to: 'pemba.t.lama@gmail.com',
+					subject: 'NodeMailer Test',
+					text: 'Thank you for registering!',
+					html: `<div>Thank you for registering!</div>`,
+				},
+				(err, res) => {
+					if (err) {
+						console.log(err);
+					} else {
+						res.status(200).send(info);
+					}
+				}
+			);
+		} catch (err) {
+			res.status(500).send(err);
+		}
 	},
 	login: async (req, res) => {
 		const { email, password } = req.body,

@@ -38,7 +38,7 @@ module.exports = {
 				{
 					from: `Momo & Brooklyn <${EMAIL}>`,
 					to: email,
-					// to: 'pemba.t.lama@gmail.com',
+					// to: 'gmail.com',
 					subject: 'NodeMailer Test',
 					text: 'Thank you for registering!',
 					html: `<div>Thank you for registering!</div>`,

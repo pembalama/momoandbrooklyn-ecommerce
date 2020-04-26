@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
 import StripeCheckoutButton from './Stripe';
+import Edit from './Edit';
 
 class Cart extends React.Component {
 	constructor(props) {
@@ -30,19 +31,35 @@ class Cart extends React.Component {
 			.catch(err => console.log(err));
 	};
 
+	editCartItem = (item, qty) => {
+		// console.log(product);
+		axios
+			.put(`/api/cart-item/${item.cart_item_id}`, { qty })
+			.then(results => {
+				this.getCart();
+			})
+			.catch(err => console.log(err));
+	};
+
 	render() {
 		const mappedCart = this.state.cart.map((item, i) => {
 			return (
-				<div key={i} className="product-container">
-					<img src={item.image} alt={item.name} className="product-image" />
-					<p>{item.name}</p>
-					<p>{item.description}</p>
-					<p>${item.price}</p>
+				<Edit
+					item={item}
+					key={i}
+					editCartItem={this.editCartItem}
+					deleteCartItem={this.deleteCartItem}
+				/>
+				// <div key={i} className="product-container">
+				// 	<img src={item.image} alt={item.name} className="product-image" />
+				// 	<p>{item.name}</p>
+				// 	<p>{item.description}</p>
+				// 	<p>${item.price}</p>
 
-					<button onClick={() => this.deleteCartItem(item.cart_item_id)}>
-						Remove Item
-					</button>
-				</div>
+				// 	<button onClick={() => this.deleteCartItem(item.cart_item_id)}>
+				// 		Remove Item
+				// 	</button>
+				// </div>
 			);
 		});
 		return (

@@ -37,6 +37,18 @@ module.exports = {
 			.then(() => res.sendStatus(200))
 			.catch(err => res.status(500).send(err));
 	},
+	editCartItem: (req, res) => {
+		const db = req.app.get('db');
+		const { id } = req.params;
+		const { qty } = req.body;
+		db.cart
+			.edit_cart_item([id, qty])
+			.then(results => {
+				res.sendStatus(200);
+			})
+			.catch(err => res.status(500).send(err));
+	},
+
 	completePurchase: async (req, res) => {
 		const { id } = req.params,
 			db = req.app.get('db');

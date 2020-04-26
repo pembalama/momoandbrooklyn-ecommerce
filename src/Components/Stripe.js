@@ -22,7 +22,7 @@ const StripeCheckoutButton = ({ price }) => {
 	return (
 		<StripeCheckout
 			label="Proceed to Checkout"
-			description={`Your total is $${price}`}
+			// description={`Your total is $${price}`}
 			amount={100}
 			// panelLabel="Proceed to Checkout"
 			token={onToken}

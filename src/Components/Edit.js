@@ -9,7 +9,8 @@ const Edit = ({ item, editCartItem, deleteCartItem }) => {
 			<div className="product-container">
 				<img src={item.image} alt={item.name} className="product-image" />
 				<p>{item.name}</p>
-				<p>${item.price * item.qty}</p>
+				{/* <p>${item.price * item.qty}</p> */}
+				<p>${item.price}</p>
 				<p>
 					qty:{' '}
 					{toggle ? (

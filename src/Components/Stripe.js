@@ -10,7 +10,7 @@ const StripeCheckoutButton = ({ price }) => {
 		token.card = void 0;
 
 		await axios
-			.post('/api/payment', { token, amount: 100 })
+			.post('/api/payment', { token, amount: stripePrice })
 			.then(() => {
 				alert('Payment Submitted');
 			})
@@ -23,7 +23,7 @@ const StripeCheckoutButton = ({ price }) => {
 		<StripeCheckout
 			label="Proceed to Checkout"
 			// description={`Your total is $${price}`}
-			amount={100}
+			amount={stripePrice}
 			// panelLabel="Proceed to Checkout"
 			token={onToken}
 			stripeKey={publicKey}

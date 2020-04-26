@@ -50,23 +50,17 @@ class Cart extends React.Component {
 					editCartItem={this.editCartItem}
 					deleteCartItem={this.deleteCartItem}
 				/>
-				// <div key={i} className="product-container">
-				// 	<img src={item.image} alt={item.name} className="product-image" />
-				// 	<p>{item.name}</p>
-				// 	<p>{item.description}</p>
-				// 	<p>${item.price}</p>
-
-				// 	<button onClick={() => this.deleteCartItem(item.cart_item_id)}>
-				// 		Remove Item
-				// 	</button>
-				// </div>
 			);
 		});
+		const total = this.state.cart.reduce((total, element) => {
+			return total + +element.price * +element.qty;
+		}, 0);
 		return (
 			<div>
 				{mappedCart}
+				<div className="total">Total Amount: ${total}</div>
 				<div>
-					<StripeCheckoutButton />
+					<StripeCheckoutButton price={total} />
 				</div>
 			</div>
 		);

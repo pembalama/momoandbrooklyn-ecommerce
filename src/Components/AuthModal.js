@@ -30,20 +30,29 @@ const AuthModal = props => {
 
 	return (
 		<div className="form">
-			<input
-				value={emailInput}
-				placeholder="Email"
-				onChange={e => setEmailInput(e.target.value)}
-			/>
-			<input
-				value={passInput}
-				placeholder="Password"
-				type="password"
-				onChange={e => setPassInput(e.target.value)}
-			/>
-			<button onClick={login}>Login</button>
-			<button onClick={register}>Register</button>
-			<button onClick={props.toggleFn}>Cancel</button>
+			<div className="modal">
+				<p>To add to your cart please sign in</p>
+				<input
+					value={emailInput}
+					placeholder="Email address"
+					onChange={e => setEmailInput(e.target.value)}
+				/>
+				<input
+					value={passInput}
+					placeholder="Password"
+					type="password"
+					onChange={e => setPassInput(e.target.value)}
+				/>
+				<button className="login-btn" onClick={login}>
+					Login
+				</button>
+				<button className="register-btn" onClick={register}>
+					Create an account
+				</button>
+				<span className="modal-close" onClick={props.toggleFn}>
+					X
+				</span>
+			</div>
 		</div>
 	);
 };

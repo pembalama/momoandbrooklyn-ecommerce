@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { getUser } from '../redux/reducer';
 import axios from 'axios';
+import './AuthModal.css';
 
 const AuthModal = props => {
 	const [emailInput, setEmailInput] = useState(''),
@@ -28,7 +29,7 @@ const AuthModal = props => {
 	};
 
 	return (
-		<div className="auth-modal">
+		<div className="form">
 			<input
 				value={emailInput}
 				placeholder="Email"

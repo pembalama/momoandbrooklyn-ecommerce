@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import axios from 'axios';
 import StripeCheckoutButton from '../Stripe/Stripe';
 import Edit from '../Edit/Edit';
+import './Cart.scss';
 
 class Cart extends React.Component {
 	constructor(props) {
@@ -56,7 +57,7 @@ class Cart extends React.Component {
 			return total + +element.price * +element.qty;
 		}, 0);
 		return (
-			<div>
+			<div className="main-cart">
 				{mappedCart}
 				<div className="total">Subtotal: ${total}</div>
 				{/* <p>Shipping: Free</p> */}

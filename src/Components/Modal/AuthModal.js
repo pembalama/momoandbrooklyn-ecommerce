@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import { getUser } from '../redux/reducer';
+import { getUser } from '../../redux/reducer';
 import axios from 'axios';
 import './AuthModal.css';
 

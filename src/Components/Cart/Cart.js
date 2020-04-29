@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
-import StripeCheckoutButton from './Stripe';
-import Edit from './Edit';
+import StripeCheckoutButton from '../Stripe/Stripe';
+import Edit from '../Edit/Edit';
 
 class Cart extends React.Component {
 	constructor(props) {

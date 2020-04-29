@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 // import '../App.scss';
-import { ReactComponent as Logo } from '../assets/MOMO & BROOKLYN.svg';
+import { ReactComponent as Logo } from '../../assets/MOMO & BROOKLYN.svg';
 
 const Header = () => (
 	<header>
@@ -16,7 +16,7 @@ const Header = () => (
 				<Link className="link" to="/cart">
 					Cart
 				</Link>
-				<Link className="link" to="/cart">
+				<Link className="link" to="/about">
 					About
 				</Link>
 			</div>

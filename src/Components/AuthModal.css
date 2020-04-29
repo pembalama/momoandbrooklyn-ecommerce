@@ -21,13 +21,42 @@
 	flex-direction: column;
 }
 
-.modal .login-btn .register-btn {
-	padding: 5px 30px;
-	background-color: black;
-	color: white;
-	/* border: none; */
+.modal input {
+	outline: 0;
+	background: #e5e5e5;
+	width: 60%;
+	border: 0;
+	padding: 15px;
+	color: black;
+	font-size: 20px;
+	box-sizing: border-box;
+}
+
+.login-btn {
 	cursor: pointer;
-	width: 120px;
+
+	outline: 0;
+	background: black;
+	width: 60%;
+	border: 0;
+	padding: 15px;
+	color: white;
+	font-size: 20px;
+	box-sizing: border-box;
+}
+
+.register-btn {
+	cursor: pointer;
+
+	outline: 0;
+	background: white;
+	width: 60%;
+	border: 0;
+	padding: 15px;
+	color: black;
+	font-size: 20px;
+	box-sizing: border-box;
+	border: 1px solid black;
 }
 
 .modal-close {

@@ -6,12 +6,20 @@ import { ReactComponent as Logo } from '../assets/MOMO & BROOKLYN.svg';
 const Header = () => (
 	<header>
 		<nav id="desktop-nav" className="header">
-			<Link to="/">Shop</Link>
+			<Link className="link" to="/">
+				Shop
+			</Link>
 			<span>
 				<Logo className="logo" />
 			</span>
-			<Link to="/cart">Cart</Link>
-			<Link to="/cart">About</Link>
+			<div className="nav-two">
+				<Link className="link" to="/cart">
+					Cart
+				</Link>
+				<Link className="link" to="/cart">
+					About
+				</Link>
+			</div>
 		</nav>
 	</header>
 );

@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { connect } from 'react-redux';
 import AuthModal from '../Modal/AuthModal';
+import './Products.css';
 
 class Products extends React.Component {
 	constructor(props) {
@@ -45,11 +46,12 @@ class Products extends React.Component {
 		const mappedProducts = this.state.products.map((product, i) => (
 			<div key={i} className="product-container">
 				<img src={product.image} alt={product.name} className="product-image" />
-				<p>{product.name}</p>
+				<p className="product-name">{product.name}</p>
 				<p>{product.description}</p>
-				<p>${product.price}</p>
+				<p className="product-price">${product.price}</p>
 				<button
 					onClick={() => this.addToCart(product.product_id, product.price)}
+					className="add-to-cart-button"
 				>
 					Add to Cart
 				</button>

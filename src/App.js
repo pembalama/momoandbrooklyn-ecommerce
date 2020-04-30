@@ -1,5 +1,5 @@
 import React from 'react';
-import StripeCheckout from 'react-stripe-checkout';
+// import StripeCheckout from 'react-stripe-checkout';
 import routes from './routes';
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';

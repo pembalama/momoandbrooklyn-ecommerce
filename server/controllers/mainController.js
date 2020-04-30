@@ -49,7 +49,7 @@ module.exports = {
 			.catch(err => res.status(500).send(err));
 	},
 
-	completePurchase: async (req, res) => {
+	completePurchase: (req, res) => {
 		const { id } = req.params,
 			db = req.app.get('db');
 
@@ -70,11 +70,12 @@ module.exports = {
 			}
 		);
 
-		db.cart.complete_purchase(id);
+		// db.cart.complete_purchase(id);async
 
-		let userCart = await db.cart.create_cart(id);
-		let sessionUser = { ...req.session.user, cart_id: userCart[0].cart_id };
-		req.session.user = sessionUser;
-		res.status(200).send(req.session.user);
+		// let userCart = await db.cart.create_cart(id);
+		// let sessionUser = { ...req.session.user, cart_id: userCart[0].cart_id };
+		// req.session.user = sessionUser;
+		// res.status(200).send(req.session.user);
+		// async;
 	},
 };

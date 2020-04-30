@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { connect } from 'react-redux';
 import AuthModal from '../Modal/AuthModal';
-import './Products.css';
+import './Products.scss';
 
 class Products extends React.Component {
 	constructor(props) {

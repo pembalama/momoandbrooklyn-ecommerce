@@ -24,9 +24,6 @@ function About() {
 					<h4>AMAZING HANDKNITTED GIFTS.</h4>
 
 					<p>Perfect gifts to make anyone feel special!</p>
-					{/* <Link className=.gearBtn to="/gear">
-						View Gear
-					</Link> */}
 				</div>
 			</div>
 		</div>

@@ -11,12 +11,12 @@
 	background-color: rgb(206, 188, 188);
 	color: black;
 
-	.icon {
-		display: flex;
-		width: 40%;
-		justify-content: space-around;
-		align-items: ceneter;
-	}
+	// .icon {
+	// 	display: flex;
+	// 	width: 40%;
+	// 	justify-content: space-around;
+	// 	align-items: ceneter;
+	// }
 	.legal-info {
 		// background-color: black;
 		font-size: 0.8em;
@@ -25,8 +25,12 @@
 	.more-info {
 		display: flex;
 		justify-content: space-around;
-		width: 60%;
+		width: 550px;
 		margin: 0 auto;
+
+		h6 {
+			cursor: pointer;
+		}
 
 		h6:hover {
 			color: #05a4b9;
@@ -49,5 +53,18 @@
 			// background-color: black;
 			font-size: 0.6em;
 		}
+
+		h6 {
+			cursor: pointer;
+		}
+	}
+}
+
+@media (min-width: 1350px) {
+	.more-info {
+		// width: 550px !important;
+		margin: 2em auto;
+		padding: 2em;
+		// background-color: black;
 	}
 }

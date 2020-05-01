@@ -33,6 +33,7 @@ app.get('/api/cart/:id', mainCtrl.getCart);
 app.delete('/api/cart-item/:id', mainCtrl.deleteCartItem);
 app.put('/api/cart-item/:id', mainCtrl.editCartItem);
 app.post('/api/payment', mainCtrl.completePurchase);
+
 //Auth endpoints
 app.post('/api/register', authCtrl.register);
 app.post('/api/login', authCtrl.login);

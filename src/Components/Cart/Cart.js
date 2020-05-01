@@ -61,7 +61,7 @@ class Cart extends React.Component {
 			<div className="main-cart">
 				{mappedCart}
 				<div className="total">Subtotal: ${total}</div>
-				{/* <p>Shipping: Free</p> */}
+				<p>Shipping: Free</p>
 				<div>
 					<StripeCheckoutButton price={total} />
 				</div>

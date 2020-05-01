@@ -31,7 +31,7 @@ const AuthModal = props => {
 	return (
 		<div className="form">
 			<div className="modal">
-				<p>To add to your cart please sign in</p>
+				<p className="modal-message">To add to your cart please sign in.</p>
 				<input
 					value={emailInput}
 					placeholder="Email address"

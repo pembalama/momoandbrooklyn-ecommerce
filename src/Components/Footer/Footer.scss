@@ -17,28 +17,37 @@
 		justify-content: space-around;
 		align-items: ceneter;
 	}
+	.legal-info {
+		// background-color: black;
+		font-size: 0.8em;
+	}
 
-	.privacy {
+	.more-info {
 		display: flex;
 		justify-content: space-around;
 		width: 60%;
 		margin: 0 auto;
 
 		h6:hover {
-			color: #00e1ff;
+			color: #05a4b9;
 		}
 	}
 }
-@media (max-width: 601px) {
+@media (max-width: 600px) {
 	.Footer {
 		height: 150px;
 
-		.icon {
+		// .icon {
+		// 	width: 100%;
+		// }
+
+		.more-info {
 			width: 100%;
 		}
 
-		.privacy {
-			width: 100%;
+		.legal-info {
+			// background-color: black;
+			font-size: 0.6em;
 		}
 	}
 }

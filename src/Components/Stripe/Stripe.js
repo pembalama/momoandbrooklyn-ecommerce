@@ -21,7 +21,7 @@ const StripeCheckoutButton = ({ price }) => {
 
 	return (
 		<StripeCheckout
-			label="Proceed to Checkout"
+			label="Pay Now"
 			// description={`Your total is $${price}`}
 			amount={stripePrice}
 			// panelLabel="Proceed to Checkout"

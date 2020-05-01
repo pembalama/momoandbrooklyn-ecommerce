@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
+import './Edit.scss';
 
 const Edit = ({ item, editCartItem, deleteCartItem }) => {
 	const [toggle, setToggle] = useState(false);
 	const [qty, setQty] = useState(item.qty);
 	console.log(toggle);
 	return (
-		<div>
+		<div className="main-container">
 			<div className="product-container">
 				<img src={item.image} alt={item.name} className="product-image" />
-				<p>{item.name}</p>
+				<p className="item-name">{item.name}</p>
 				{/* <p>${item.price * item.qty}</p> */}
-				<p>${item.price}</p>
-				<p>
-					qty:{' '}
+				<p className="item-price">${item.price}</p>
+				<p className="item-qty">
+					Qty:{' '}
 					{toggle ? (
 						<input
 							name="qty"

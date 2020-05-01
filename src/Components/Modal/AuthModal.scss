@@ -13,12 +13,18 @@
 .modal {
 	position: relative;
 	background-color: white;
-	width: 90%;
-	height: 50%;
+	width: 80%;
+	height: 30%;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 	flex-direction: column;
+	padding-bottom: 2em;
+}
+
+.modal-message {
+	font-weight: bold;
+	padding-top: 0.7em;
 }
 
 .modal input {
@@ -30,6 +36,11 @@
 	color: black;
 	font-size: 12px;
 	box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus {
+	outline: 3px solid #acacac;
 }
 
 .login-btn {
@@ -55,6 +66,7 @@
 	padding: 10px;
 	color: black;
 	font-size: 12px;
+	font-weight: bold;
 	box-sizing: border-box;
 	border: 1px solid black;
 }
@@ -89,6 +101,8 @@
 		justify-content: space-around;
 		align-items: center;
 		flex-direction: column;
+		// margin-bottom: 1em;
+		padding-bottom: 5em;
 	}
 
 	.modal input {
@@ -135,5 +149,10 @@
 		right: 10px;
 		font-weight: bold;
 		cursor: pointer;
+	}
+
+	input:focus,
+	textarea:focus {
+		outline: 3px solid #acacac;
 	}
 }

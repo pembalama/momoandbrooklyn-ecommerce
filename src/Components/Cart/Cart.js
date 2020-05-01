@@ -50,6 +50,7 @@ class Cart extends React.Component {
 					key={i}
 					editCartItem={this.editCartItem}
 					deleteCartItem={this.deleteCartItem}
+					className="main-cart"
 				/>
 			);
 		});

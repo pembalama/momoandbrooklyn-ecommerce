@@ -1,6 +1,6 @@
 .Footer {
 	display: flex;
-	font-family: 'Oswald', sans-serif;
+	font-family: 'Poppins', sans-serif;
 	flex-direction: column;
 	margin: 0 auto;
 	width: 100%;
@@ -11,15 +11,17 @@
 	background-color: rgb(206, 188, 188);
 	color: black;
 
-	// .icon {
-	// 	display: flex;
-	// 	width: 40%;
-	// 	justify-content: space-around;
-	// 	align-items: ceneter;
-	// }
+	.icon {
+		display: flex;
+		width: 220px;
+		justify-content: space-around;
+		align-items: center;
+		font-size: 1.5rem;
+	}
 	.legal-info {
-		// background-color: black;
 		font-size: 0.8em;
+		padding-top: 1em;
+		padding-bottom: 1em;
 	}
 
 	.more-info {
@@ -60,11 +62,11 @@
 	}
 }
 
-@media (min-width: 1350px) {
-	.more-info {
-		// width: 550px !important;
-		margin: 2em auto;
-		padding: 2em;
-		// background-color: black;
-	}
-}
+// @media (min-width: 1350px) {
+// 	.more-info {
+// 		// width: 550px !important;
+// 		margin: 2em auto;
+// 		padding: 2em;
+// 		// background-color: black;
+// 	}
+// }

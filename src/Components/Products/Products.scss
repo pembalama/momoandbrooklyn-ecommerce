@@ -24,6 +24,14 @@
 	margin-top: 3em;
 }
 
+.current-page {
+	border-bottom: 1px solid #707070;
+}
+
+.current-page:hover {
+	color: #707070;
+}
+
 .product-name,
 .product-price {
 	font-weight: bold;

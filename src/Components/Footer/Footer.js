@@ -5,15 +5,13 @@ import './Footer.scss';
 
 const Footer = () => (
 	<section className="Footer">
-		<div className="legal-info">
-			COPYRIGHT © 2020 MOMO & BROOKLYN BY PEMBA LAMA
-		</div>
-		{/* <div className="icon">
-			<i className="fab fa-facebook"></i>
-			<i className=" fab fa-instagram"></i>
+		<div className="legal-info">© 2020 MOMO & BROOKLYN, Inc.</div>
+		<div className="icon">
+			<i className="fab fa-facebook-square"></i>
+			<i className=" fab fa-twitter"></i>
+			<i className="fab fa-instagram"></i>
 			<i className="fab fa-pinterest"></i>
-			<i className="fab fa-youtube"></i>
-		</div> */}
+		</div>
 		<div className="more-info">
 			<h6>Contact Us</h6>
 			<h6>Terms of Use</h6>

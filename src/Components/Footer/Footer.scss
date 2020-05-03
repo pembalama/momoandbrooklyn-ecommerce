@@ -17,6 +17,11 @@
 		justify-content: space-around;
 		align-items: center;
 		font-size: 1.5rem;
+		cursor: pointer;
+	}
+
+	i:hover {
+		color: #777;
 	}
 	.legal-info {
 		font-size: 0.8em;
@@ -35,7 +40,7 @@
 		}
 
 		h6:hover {
-			color: #05a4b9;
+			color: #777;
 		}
 	}
 }

@@ -1,5 +1,4 @@
 import React from 'react';
-// import StripeCheckout from 'react-stripe-checkout';
 import routes from './routes';
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
@@ -9,7 +8,9 @@ function App() {
 	return (
 		<div className="App">
 			<Header />
-			{routes}
+			<div style={{ paddingTop: '75px', minHeight: 'calc(100vh - 80px)' }}>
+				{routes}
+			</div>
 			<Footer />
 		</div>
 	);

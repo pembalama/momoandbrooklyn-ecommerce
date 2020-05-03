@@ -10,7 +10,6 @@ export function getUser(userObj) {
 	return {
 		type: GET_USER,
 		payload: userObj,
-		//NEED TO DOUBLE CHECK THIS COMMA FROM VS CODE FOR THE PAYLOAD
 	};
 }
 

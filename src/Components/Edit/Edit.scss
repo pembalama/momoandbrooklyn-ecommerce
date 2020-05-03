@@ -2,10 +2,37 @@
 .item-price,
 .item-qty {
 	font-weight: bold;
-	// background-color: black;
 }
 
 .main-container {
 	// background-color: Green;
 	align-items: center;
+	margin-bottom: 5em;
+}
+
+.edit-btn,
+.delete-btn,
+.save-btn {
+	border: none;
+	text-decoration: underline;
+	padding: 0;
+	cursor: pointer;
+	margin-right: 2em;
+}
+
+.qtn-input {
+	width: 2em;
+}
+
+@media (min-width: 650px) {
+	.cart-container {
+		width: 500px;
+		display: grid;
+		grid-template-columns: repeat(2, auto);
+		grid-gap: 3em;
+		align-items: center;
+		// margin: 0 auto;
+		margin-left: 200px;
+		text-align: left;
+	}
 }

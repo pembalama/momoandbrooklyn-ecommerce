@@ -50,7 +50,6 @@ class Cart extends React.Component {
 					key={i}
 					editCartItem={this.editCartItem}
 					deleteCartItem={this.deleteCartItem}
-					className="main-cart"
 				/>
 			);
 		});
@@ -60,8 +59,17 @@ class Cart extends React.Component {
 		return (
 			<div className="main-cart">
 				{mappedCart}
-				<div className="total">Subtotal: ${total}</div>
-				<p>Shipping: Free</p>
+				<div className="total">
+					<span className="pymt-span">Subtotal</span>{' '}
+					<span className="pymt-span subtotal">${total}.00</span>
+				</div>
+				<br />
+				<div>
+					<span className="pymt-span">Shipping</span>{' '}
+					<span className="pymt-span free">Free</span>
+				</div>
+				<br />
+				<br />
 				<div>
 					<StripeCheckoutButton price={total} />
 				</div>

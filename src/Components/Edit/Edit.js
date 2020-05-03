@@ -7,38 +7,49 @@ const Edit = ({ item, editCartItem, deleteCartItem }) => {
 	console.log(toggle);
 	return (
 		<div className="main-container">
-			<div className="product-container">
-				<img src={item.image} alt={item.name} className="product-image" />
-				<p className="item-name">{item.name}</p>
+			<div className="cart-container">
+				<div className="two-col">
+					<img src={item.image} alt={item.name} className="product-image" />
+				</div>
+				<div className="two-col">
+					<p className="item-name">{item.name}</p>
 
-				<p className="item-price">${item.price}</p>
-				<p className="item-qty">
-					Qty:{' '}
+					<p className="item-price">${item.price}</p>
+					<p className="item-qty">
+						Qty:{' '}
+						{toggle ? (
+							<input
+								name="qty"
+								value={qty}
+								onChange={e => setQty(e.target.value)}
+								className="qtn-input"
+							/>
+						) : (
+							item.qty
+						)}
+					</p>
 					{toggle ? (
-						<input
-							name="qty"
-							value={qty}
-							onChange={e => setQty(e.target.value)}
-						/>
+						<button
+							onClick={() => {
+								setToggle(!toggle);
+								editCartItem(item, qty);
+							}}
+							className="save-btn"
+						>
+							Save
+						</button>
 					) : (
-						item.qty
+						<button onClick={() => setToggle(!toggle)} className="edit-btn">
+							Edit
+						</button>
 					)}
-				</p>
-				{toggle ? (
 					<button
-						onClick={() => {
-							setToggle(!toggle);
-							editCartItem(item, qty);
-						}}
+						onClick={() => deleteCartItem(item.cart_item_id)}
+						className="delete-btn"
 					>
-						Save
+						Delete
 					</button>
-				) : (
-					<button onClick={() => setToggle(!toggle)}>Edit</button>
-				)}
-				<button onClick={() => deleteCartItem(item.cart_item_id)}>
-					Delete
-				</button>
+				</div>
 			</div>
 		</div>
 	);

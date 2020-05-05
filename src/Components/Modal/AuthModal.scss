@@ -65,9 +65,12 @@ input:focus {
 	padding: 10px;
 	color: black;
 	font-size: 12px;
-	font-weight: bold;
+	// font-weight: bold;
 	box-sizing: border-box;
 	border: 1px solid black;
+}
+.register-btn span{
+	font-weight: bold;
 }
 
 .modal-close {

@@ -1,6 +1,5 @@
 import React from 'react';
 
-// import '../App.scss';
 import './Footer.scss';
 
 const Footer = () => (
@@ -14,7 +13,7 @@ const Footer = () => (
 		</div>
 		<div className="more-info">
 			<h6>Contact Us</h6>
-			<h6>Terms of Use</h6>
+			<h6>Terms</h6>
 			<h6>Privacy Policy</h6>
 			<h6>Returns</h6>
 			<h6>Careers</h6>

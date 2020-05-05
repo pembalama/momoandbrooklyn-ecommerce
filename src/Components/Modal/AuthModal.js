@@ -47,7 +47,7 @@ const AuthModal = props => {
 					Login
 				</button>
 				<button className="register-btn" onClick={register}>
-					Create an account
+					Don't have an account? <span>Sign up</span>
 				</button>
 				<span className="modal-close" onClick={props.toggleFn}>
 					X

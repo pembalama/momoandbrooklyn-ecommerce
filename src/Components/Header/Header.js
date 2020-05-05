@@ -3,6 +3,7 @@ import { withRouter, Link } from 'react-router-dom';
 import axios from 'axios';
 import { connect } from 'react-redux';
 import { logoutUser } from '../../redux/reducer';
+import './Header.scss';
 
 const Header = props => {
 	const handleLogout = () => {
@@ -27,13 +28,13 @@ const Header = props => {
 					<nav id="desktop-nav" className="header">
 						<ul>
 							<li>
-								<Link to="/">shop</Link>
+								<Link to="/">Shop</Link>
 							</li>
 							<li>
-								<Link to="/cart">cart</Link>
+								<Link to="/cart">Cart</Link>
 							</li>
 							<li>
-								<Link to="/about">about</Link>
+								<Link to="/about">About</Link>
 							</li>
 							<li>
 								<Link to="/" onClick={() => handleLogout()}>
@@ -46,13 +47,13 @@ const Header = props => {
 					<nav id="desktop-nav" className="header">
 						<ul>
 							<li>
-								<Link to="/">shop</Link>
+								<Link to="/">Shop</Link>
 							</li>
 							<li>
-								<Link to="/cart">cart</Link>
+								<Link to="/cart">Cart</Link>
 							</li>
 							<li>
-								<Link to="/about">about</Link>
+								<Link to="/about">About</Link>
 							</li>
 						</ul>
 					</nav>

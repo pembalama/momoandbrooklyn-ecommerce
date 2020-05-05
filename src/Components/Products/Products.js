@@ -47,7 +47,7 @@ class Products extends React.Component {
 			<div key={i} className="product-container">
 				<img src={product.image} alt={product.name} className="product-image" />
 				<p className="product-name">{product.name}</p>
-				<p>{product.description}</p>
+				<p className="product-description">{product.description}</p>
 				<p className="product-price">${product.price}</p>
 				<button
 					onClick={() => this.addToCart(product.product_id, product.price)}

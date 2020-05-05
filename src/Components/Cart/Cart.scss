@@ -1,21 +1,27 @@
 .main-cart {
 	text-align: center;
-	margin: 5em 0;
+	margin-top: 5em;
 }
 
 .pymt-span {
-	padding: 0.5em;
-	margin: 1em;
-	// height: 10em;
-	// width: 370px;
-	// text-align: center;
+	display: inline-block;
+	width: 125px;
+	height: 25px;
 }
 
 .total {
-	margin-top: 15em;
+	margin-top: 20em;
 }
 
 .subtotal,
 .free {
 	font-weight: bold;
+}
+
+.stripe-btn {
+	margin-bottom: 10em;
+}
+
+.line-break {
+	width: 12%;
 }

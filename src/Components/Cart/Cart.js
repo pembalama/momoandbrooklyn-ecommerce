@@ -60,7 +60,9 @@ class Cart extends React.Component {
 			<div className="main-cart">
 				{mappedCart}
 				<div className="total">
-					<span className="pymt-span">Subtotal</span>{' '}
+					<hr className='line-break'></hr>
+					<br></br>
+					<span className="pymt-span line">Subtotal</span>{' '}
 					<span className="pymt-span subtotal">${total}.00</span>
 				</div>
 				<br />
@@ -68,9 +70,9 @@ class Cart extends React.Component {
 					<span className="pymt-span">Shipping</span>{' '}
 					<span className="pymt-span free">Free</span>
 				</div>
+
 				<br />
-				<br />
-				<div>
+				<div className="stripe-btn">
 					<StripeCheckoutButton price={total} />
 				</div>
 			</div>

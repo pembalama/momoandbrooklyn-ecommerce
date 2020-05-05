@@ -19,6 +19,7 @@ const Edit = ({ item, editCartItem, deleteCartItem }) => {
 						Qty:{' '}
 						{toggle ? (
 							<input
+								type="number"
 								name="qty"
 								value={qty}
 								onChange={e => setQty(e.target.value)}

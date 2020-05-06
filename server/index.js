@@ -4,6 +4,7 @@ const express = require('express'),
 	session = require('express-session'),
 	authCtrl = require('./controllers/authController'),
 	mainCtrl = require('./controllers/mainController'),
+	path = require('path'),
 	{ SERVER_PORT, CONNECTION_STRING, SESSION_SECRET } = process.env,
 	port = SERVER_PORT,
 	app = express();
@@ -38,5 +39,10 @@ app.post('/api/payment', mainCtrl.completePurchase);
 app.post('/api/register', authCtrl.register);
 app.post('/api/login', authCtrl.login);
 app.get('/api/logout', authCtrl.logout);
+
+app.use(express.static(`${__dirname}/../build`));
+app.get('*', (req, res) => {
+	res.sendFile(path.join(__dirname, '../build/index.html'));
+});
 
 app.listen(port, () => console.log(`Server running on ${port}`));
